@@ -9,8 +9,8 @@ public class MultiPlayer extends Game
 {
     int minPlayer;
     int maxPlayer;
-    public MultiPlayer(String gameName, String platform, char gameAgeRate)
+    public MultiPlayer(String gameName, char gameAgeRate)
     {
-        super(gameName, platform, gameAgeRate);
+        super(gameName,gameAgeRate);
     }
 }

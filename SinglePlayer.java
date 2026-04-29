@@ -7,8 +7,8 @@
  */
 public class SinglePlayer extends Game
 {
-    public SinglePlayer(String gameName, String platform, char gameAgeRate)
+    public SinglePlayer(String gameName, char gameAgeRate)
     {
-        super(gameName, platform, gameAgeRate);
+        super(gameName, gameAgeRate);
     }
 }

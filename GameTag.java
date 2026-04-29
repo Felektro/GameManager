@@ -1,0 +1,5 @@
+
+public enum GameTag
+{
+    INDIE, AAA, TWOD, THREED, F2P, ADVENTURE, STRATEGIE
+}
