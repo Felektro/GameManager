@@ -8,10 +8,10 @@ import java.util.HashSet;
  * @author (your name)
  * @version (a version number or a date)
  */
-public class Library
+public class GameLibrary
 {
     public HashSet <Game> games;
-    public Library()
+    public GameLibrary()
     {
         games = new HashSet<>();
     }
