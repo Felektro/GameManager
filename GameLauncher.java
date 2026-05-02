@@ -1,26 +1,22 @@
-
-/**
- * Write a description of class GameLauncher here.
- *
- * @author (your name)
- * @version (a version number or a date)
- */
+import java.util.*;
 public class GameLauncher
 {
-    double startTime;
-    double endTime;
+    public Game game;
+    public long startTime;
+    public long endTime;
     public GameLauncher()
     {
         
     }
     
-    public void startTime()
+    public void startGameTime(Game game)
     {
-        
+        this.game = game;
+        this.startTime = System.currentTimeMillis();
     }
     
-    public void endTime()
+    public void endGameTime()
     {
-        
+        this.endTime = System.currentTimeMillis();
     }
 }

@@ -8,16 +8,16 @@ import java.util.HashMap;
  */
 public class Game
 {
+    public String gameName;
+    public char gameAgeRate;
     public GameTag gameTag;
     public Platform platform;
-    String gameName;
-    String genre;
-    char gameAgeRate;
-    public Game(String gameName, char gameAgeRate)
+    public double rating;
+    public Game(String gameName, char gameAgeRate, double rating)
     {
         this.gameName = gameName;
-        this.genre = genre;
         this.gameAgeRate = gameAgeRate;
+        this.rating = rating;
     }
     
     public String getGameName()
@@ -30,9 +30,9 @@ public class Game
         return gameAgeRate;
     }
     
-    public String getGenre()
+    public double getRating()
     {
-        return genre;
+        return rating;
     }
     
     public String platformOfGame(Platform platform)
