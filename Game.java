@@ -13,11 +13,13 @@ public class Game
     public GameTag gameTag;
     public Platform platform;
     public double rating;
-    public Game(String gameName, char gameAgeRate, double rating)
+    public Game(String gameName, char gameAgeRate, double rating, Platform platform, GameTag gameTag)
     {
         this.gameName = gameName;
         this.gameAgeRate = gameAgeRate;
         this.rating = rating;
+        this.platform = platform;
+        this.gameTag = gameTag;
     }
     
     public String getGameName()
@@ -35,27 +37,22 @@ public class Game
         return rating;
     }
     
-    public String platformOfGame(Platform platform)
+    public Platform getPlatform()
     {
-        return switch(platform){
-            case PC -> "Made for PC";
-            case PLAYSTATION -> "Made for PlayStation";
-            case XBOX -> "Made for Xbox";
-            case SWITCH -> "Made for Switch";
-            case MOBILE -> "Made for Mobile";
-        };
+        return platform;
     }
     
-    public String TagOfGame(GameTag gameTag)
+    public GameTag getGameTag()
     {
-        return switch(gameTag){
-            case INDIE -> "Indie";
-            case AAA -> "AAA";
-            case TWOD -> "2D";
-            case THREED -> "3D";
-            case F2P -> "Free To Play";
-            case ADVENTURE -> "Adventure";
-            case STRATEGIE -> "Strategie";
-        };
+        return gameTag;
+    }
+    
+    public String toString()
+    {
+        return "Game: " + gameName + 
+               ". Rated: " + gameAgeRate + 
+               ". Rating: " + rating + 
+               ". Platform: " + platform + 
+               ". GameTag: " + gameTag;
     }
 }
