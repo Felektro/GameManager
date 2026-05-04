@@ -1,26 +1,27 @@
-import java.util.HashMap;
 import java.util.ArrayList;
-import java.util.HashSet;
-
-/**
- * Write a description of class Library here.
- *
- * @author (your name)
- * @version (a version number or a date)
- */
 public class Library
 {
-    public HashSet <Game> games;
+    public ArrayList <Game> games;
+    
     public Library()
     {
-        games = new HashSet<>();
+        games = new ArrayList<>();
     }
-    public void addGameAndGenre(Game game)
+    
+    public void addGame(Game game)
     {
         games.add(game);
     }
-    public void removeGameAndGenre(Game game)
+    
+    public void removeGame(Game game)
     {
         games.remove(game);
+    }
+    
+    public void printAllGames()
+    {
+        for(Game g: games){
+            System.out.println(g.toString());
+        }
     }
 }

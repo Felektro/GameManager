@@ -1,0 +1,11 @@
+#BlueJ class context
+comment0.target=Library
+comment1.params=
+comment1.target=Library()
+comment2.params=game
+comment2.target=void\ addGame(Game)
+comment3.params=game
+comment3.target=void\ removeGame(Game)
+comment4.params=
+comment4.target=void\ printAllGames()
+numComments=5

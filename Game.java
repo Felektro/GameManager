@@ -8,31 +8,51 @@ import java.util.HashMap;
  */
 public class Game
 {
-    String gameName;
-    String platform;
-    String genre;
-    char gameAgeRate;
-    public Game(String gameName, String platform, char gameAgeRate)
+    public String gameName;
+    public char gameAgeRate;
+    public GameTag gameTag;
+    public Platform platform;
+    public double rating;
+    public Game(String gameName, char gameAgeRate, double rating, Platform platform, GameTag gameTag)
     {
         this.gameName = gameName;
-        this.platform = platform;
-        this.genre = genre;
         this.gameAgeRate = gameAgeRate;
+        this.rating = rating;
+        this.platform = platform;
+        this.gameTag = gameTag;
     }
+    
     public String getGameName()
     {
         return gameName;
     }
-    public String getPlatform()
-    {
-        return platform;
-    }
+    
     public char getAgeRate()
     {
         return gameAgeRate;
     }
-    public String getGenre()
+    
+    public double getRating()
     {
-        return genre;
+        return rating;
+    }
+    
+    public Platform getPlatform()
+    {
+        return platform;
+    }
+    
+    public GameTag getGameTag()
+    {
+        return gameTag;
+    }
+    
+    public String toString()
+    {
+        return "Game: " + gameName + 
+               ". Rated: " + gameAgeRate + 
+               ". Rating: " + rating + 
+               ". Platform: " + platform + 
+               ". GameTag: " + gameTag;
     }
 }
