@@ -1,5 +1,5 @@
 
 public enum Platform
 {
-    PC, PLAYSTATION, XBOX, SWITCH, MOBILE
+    PC, PS4, XBOX, SWITCH, MOBILE
 }
