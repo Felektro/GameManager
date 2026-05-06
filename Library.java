@@ -29,6 +29,71 @@ public class Library
             games.get(i).addGameTag(GameTag.TWOD);
         }
     }
+    //option 1
+    public String libDetails(){
+        return "This library contains " + games.size() + " games!";
+    }
+    
+    //option 2
+    public String listAllGames(){
+        String result = "";
+        for(Game g : games){
+            result += g.toString() + "\n";
+        }
+        return result;
+    }
+    
+    //option 3
+    public String sortGames(String sortBy, String sortInfo){
+        String result = "";
+        
+        switch(sortBy){
+            case "tag":
+                
+                for(Game g : games){
+                    if(g.tags.contains(GameTag.valueOf(sortInfo))){
+                        result += g.toString() + "\n";
+                    }
+                }
+                
+                break;
+            case "plat":
+                
+                break;
+            
+        }
+        
+        
+        return result;
+    }
+    
+    //option 4
+    
+    public String topRatedGames(int count){
+        String result = "";
+        
+        ArrayList<Game> copy = new ArrayList<>(games);
+        
+        for (int i = 0; i < count; i++){
+            int maxR = 0;
+            int maxInd = 0;
+            int j = 0;
+            
+            for(Game g : copy){
+                if(maxR < g.getRating()){
+                    maxR = g.getRating();
+                    maxInd = j;
+                }
+                
+                j++;
+            }
+            
+            result += games.get(maxInd).toString() + "\n";
+            copy.remove(maxInd);
+        }
+        
+        return result;
+    }
     
     public void addGame(Game game)
     {
