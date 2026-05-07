@@ -1,4 +1,3 @@
-import java.util.HashMap;
 import java.util.HashSet;
 
 /**
@@ -17,6 +16,7 @@ public class Game
     public HashSet<Platform> platforms = new HashSet<>();
     
     public float rating; 
+    public float playtime = 0.0f;
     
     public Game(String gameName, char gameAgeRate, float rating, int gameID)
     {
@@ -40,10 +40,20 @@ public class Game
     {
         return rating;
     }
+
+    public void setRating(float rating)
+    {
+        this.rating = rating;
+    }
     
     public int getID()
     {
         return gameID;
+    }
+
+    public void setID(int gameID)
+    {
+        this.gameID = gameID;
     }
     
     public void addPlatform(Platform p)
