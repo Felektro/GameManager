@@ -1,9 +1,9 @@
 
 /**
- * Write a description of class SinglePlayer here.
+ * Is the game a singlePlayer?
  *
  * @author Guy
- * @version (a version number or a date)
+ * @version (5/7/2026)
  */
 public class SinglePlayer extends Game
 {

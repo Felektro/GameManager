@@ -2,10 +2,11 @@ import java.util.Scanner;
 
 
 /**
- * Write a description of class Main here.
+ * Here you could interact with the scanner! To find easily your library details, the list of games; by genre or by platform,
+ * list top rated games, print details, rate a game, start a session and print sesssion. You can also add your own game!
  *
  * @author Illia
- * @version (a version number or a date)
+ * @version (5/7/2026)
  */
 public class Main
 {

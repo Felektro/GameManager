@@ -1,9 +1,9 @@
 
 /**
- * Write a description of class MultiPlayer here.
+ * Is the game a multiplayer?
  *
  * @author Guy
- * @version (a version number or a date)
+ * @version (5/7/2026)
  */
 public class MultiPlayer extends Game
 {

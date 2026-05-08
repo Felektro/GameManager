@@ -2,10 +2,11 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 /**
- * Write a description of class MultiPlayer here.
+ * Welcome to the library! This is where you can store your games! Print their details, sort them out, 
+ * find the top rated and more!
  *
  * @author Illia
- * @version (a version number or a date)
+ * @version (5/7/2026)
  */
 
 public class Library
@@ -39,12 +40,19 @@ public class Library
             games.get(i).addGameTag(GameTag.TWOD);
         }
     }
+    
     //option 1
+    /**
+     * Returns a string of the library details
+    */
     public String libDetails(){
         return "This library contains " + games.size() + " games!";
     }
     
     //option 2
+    /**
+     * Returns a string of all the listed games
+     */
     public String listAllGames(){
         String result = "";
         for(Game g : games){
@@ -54,6 +62,9 @@ public class Library
     }
     
     //option 3
+    /**
+     * Returns a string of games by sorting them; by gametag or platform. 
+     */
     public String sortGames(String sortBy, String sortInfo){
         String result = "";
         
