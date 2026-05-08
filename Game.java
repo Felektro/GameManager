@@ -33,7 +33,7 @@ public class Game
     /**
      * Returns the game's name
      */
-    public String getGameName()
+    public String getName()
     {
         return gameName;
     }
@@ -104,7 +104,8 @@ public class Game
                ". Rated: " + gameAgeRate + 
                ". Rating: " + rating + 
                ". Platforms: " + platforms.toString() + 
-               ". GameTags: " + tags.toString();
+               ". GameTags: " + tags.toString() +
+               ". Playtime: " + playtime;
     }
     
     //Author: Illia

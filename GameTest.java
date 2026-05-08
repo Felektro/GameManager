@@ -44,7 +44,7 @@ public class GameTest
     public void testConstructor()
     {
         Game game1 = new Game("test_game", 'E', 5.5f, 2);
-        assertEquals("test_game", game1.getGameName());
+        assertEquals("test_game", game1.getName());
         assertEquals('E', game1.getAgeRate());
         assertEquals(5.5f, game1.getRating());
         assertEquals(2, game1.getID());

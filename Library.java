@@ -15,7 +15,9 @@ public class Library
     
     double startPlaytime = 0.0;
 
-    int nextID = 6;
+    int nextID = 8;
+    
+    Game lastGame = null;
 
     public Library()
     {
@@ -26,8 +28,8 @@ public class Library
         addGame(new Game("test_game3", 'A', 5.7f, 3));
         addGame(new Game("test_game2", 'T', 5.8f, 4));
         addGame(new Game("test_game3", 'A', 5.9f, 5));
-        addGame(new SinglePlayer("test_SinglePlayer", 'A', 5.9f, 3));
-        addGame(new MultiPlayer("test_MultiPlayer", 'A', 5.9f, 3));
+        addGame(new SinglePlayer("test_SinglePlayer", 'A', 5.9f, 6));
+        addGame(new MultiPlayer("test_MultiPlayer", 'A', 5.9f, 7));
         ((MultiPlayer) games.get(games.size() - 1)).setMaxPlayers(4);
         
         for(int i = 0; i < 3; i++){
@@ -135,7 +137,7 @@ public class Library
     //option 5
     public Game searchByName(String name){
         for(Game g : games){
-            if(g.getGameName().toLowerCase().contains(name.toLowerCase())){
+            if(g.getName().toLowerCase().contains(name.toLowerCase())){
                 return g;
             }
         }
@@ -145,7 +147,7 @@ public class Library
     //option 7
 
     public void startGameSession(Game game){
-        System.out.println("Starting " + game.getGameName() + "...");
+        System.out.println("Starting " + game.getName() + "...");
         if(game instanceof SinglePlayer){
             System.out.println("Enjoy your single player experience!");
         }
@@ -171,9 +173,11 @@ public class Library
                 System.out.println("Youve been playing for " + playtime + " seconds. Type 'exit' to end the session.");
             }
             playtime = (System.currentTimeMillis() - startPlaytime) / 1000.0f;
-            game.playtime += playtime;
+            
         }
 
+        game.playtime += playtime;
+        lastGame = game;
     }
 
     public void addGame(Game game)

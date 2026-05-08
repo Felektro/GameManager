@@ -31,7 +31,7 @@ public class Main
                                 "5. Print game details\n" + 
                                 "6. Rate a game\n" + 
                                 "7. Start a game session\n" + 
-                                "8. Print game session log\n" + 
+                                "8. Print last game session\n" + 
                                 "9. Add your own game\n" + 
                                 "0. EXIT\n");
             
@@ -126,7 +126,11 @@ public class Main
                     }
                     break;
                 case 8: 
-                    //
+                    if(lib.lastGame != null){
+                        System.out.println("You have played " + lib.lastGame.getName() + " for " + lib.lastGame.playtime + " seconds.");
+                    }else{
+                        System.out.println("You havent played any game yet");
+                    }
                     break;
                 case 9: 
                     System.out.println("Whats the name of the game you want to add?");
@@ -143,18 +147,29 @@ public class Main
                     lib.addGame(newGame);
                     
                     boolean pickingPlatform = true;
-
+                    
+                    loop:
                     while(pickingPlatform){
                         System.out.println("What platform is it on? \nType 'done' when finished");
+                        boolean platformsLeft = false;
                         for(Platform p: Platform.values()){
-                            System.out.print(p + " ");
+                            if(!newGame.platforms.contains(p)){
+                                System.out.print(p + " ");
+                                platformsLeft = true;
+                            }
                         }
+                        if(!platformsLeft){
+                            pickingPlatform = false;
+                            break loop;
+                        }
+                        
                         String input = sc.nextLine();
                         try{
                             newGame.addPlatform(Platform.valueOf(input));
                         }catch(Exception e){
                             if (input.equalsIgnoreCase("done")) {
                                 pickingPlatform = false;
+                                break;
                             }
                             System.out.println("Not an option");
                         }
@@ -162,11 +177,21 @@ public class Main
 
                     boolean pickingTags = true;
 
+                    loop:
                     while(pickingTags){
                         System.out.println("What tags does it have? \n Type 'done' when finished");
+                        boolean tagsLeft = false;
                         for(GameTag t: GameTag.values()){
-                            System.out.print(t + " ");
+                            if(!newGame.tags.contains(t)){
+                                System.out.print(t + " ");
+                                tagsLeft = true;
+                            }
                         }
+                        if(!tagsLeft){
+                            pickingTags = false;
+                            break loop;
+                        }
+                        
                         String input = sc.nextLine();
                         try{
                             newGame.addGameTag(GameTag.valueOf(input));
@@ -176,7 +201,6 @@ public class Main
                                 break;
                             }
                             System.out.println("Not an option");
-                            break;
                         }
                     }
                 
