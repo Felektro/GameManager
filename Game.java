@@ -4,7 +4,7 @@ import java.util.HashSet;
  * Add your game here! a variety of details! Your game's name, age rating, your rating,
  * the tags and the platforms it could be played on. 
  *
- * @author Guy
+ * @author (Guy)
  * @version (5/7/2026)
  */
 public class Game
@@ -114,7 +114,7 @@ public class Game
     @Override
     public boolean equals(Object o){
         if(this == o) {return true;}
-        if(o == null || (o instanceof Game)) {return false;}
+        if(o == null || !(o instanceof Game)) {return false;}
         
         return this.gameID == ((Game)o).gameID;
     }

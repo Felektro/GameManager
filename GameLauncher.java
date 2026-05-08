@@ -1,9 +1,9 @@
 import java.util.*;
 
 /**
- * Write a description of class MultiPlayer here.
+ * A simulator of time you've played a game.
  *
- * @author Illia
+ * @author (Illia)
  * @version (5/7/2026)
  */
 
@@ -19,6 +19,9 @@ public class GameLauncher
         
     }
     
+    /**
+     * 
+     */
     public void startGameTime(Game game)
     {
         this.game = game;

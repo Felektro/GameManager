@@ -5,7 +5,7 @@ import java.util.Scanner;
  * Welcome to the library! This is where you can store your games! Print their details, sort them out, 
  * find the top rated and more!
  *
- * @author Illia
+ * @author (Illia)
  * @version (5/7/2026)
  */
 

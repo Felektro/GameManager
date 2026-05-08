@@ -1,8 +1,8 @@
 
 /**
- * Is the game a singlePlayer?
+ * SinglePlayer Games you could add
  *
- * @author Guy
+ * @author (Guy)
  * @version (5/7/2026)
  */
 public class SinglePlayer extends Game

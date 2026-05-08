@@ -1,10 +1,11 @@
 #BlueJ class context
 comment0.target=GameLauncher
-comment0.text=\r\n\ Write\ a\ description\ of\ class\ MultiPlayer\ here.\r\n\r\n\ @author\ Illia\r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment0.text=\r\n\ A\ simulator\ of\ time\ you've\ played\ a\ game.\r\n\r\n\ @author\ (Illia)\r\n\ @version\ (5/7/2026)\r\n
 comment1.params=
 comment1.target=GameLauncher()
 comment2.params=game
 comment2.target=void\ startGameTime(Game)
+comment2.text=\r\n\ \r\n
 comment3.params=
 comment3.target=void\ endGameTime()
 numComments=4

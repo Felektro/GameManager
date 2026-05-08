@@ -1,6 +1,6 @@
 #BlueJ class context
 comment0.target=Library
-comment0.text=\r\n\ Welcome\ to\ the\ library\!\ This\ is\ where\ you\ can\ store\ your\ games\!\ Print\ their\ details,\ sort\ them\ out,\ \r\n\ find\ the\ top\ rated\ and\ more\!\r\n\r\n\ @author\ Illia\r\n\ @version\ (5/7/2026)\r\n
+comment0.text=\r\n\ Welcome\ to\ the\ library\!\ This\ is\ where\ you\ can\ store\ your\ games\!\ Print\ their\ details,\ sort\ them\ out,\ \r\n\ find\ the\ top\ rated\ and\ more\!\r\n\r\n\ @author\ (Illia)\r\n\ @version\ (5/7/2026)\r\n
 comment1.params=
 comment1.target=Library()
 comment10.params=

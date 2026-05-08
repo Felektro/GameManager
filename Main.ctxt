@@ -1,6 +1,6 @@
 #BlueJ class context
 comment0.target=Main
-comment0.text=\r\n\ Here\ you\ could\ interact\ with\ the\ scanner\!\ To\ find\ easily\ your\ library\ details,\ the\ list\ of\ games;\ by\ genre\ or\ by\ platform,\r\n\ list\ top\ rated\ games,\ print\ details,\ rate\ a\ game,\ start\ a\ session\ and\ print\ sesssion.\ You\ can\ also\ add\ your\ own\ game\!\r\n\r\n\ @author\ Illia\r\n\ @version\ (5/7/2026)\r\n
+comment0.text=\r\n\ Here\ you\ could\ interact\ with\ the\ scanner\!\ To\ find\ easily\ your\ library\ details,\ the\ list\ of\ games;\ by\ genre\ or\ by\ platform,\r\n\ list\ top\ rated\ games,\ print\ details,\ rate\ a\ game,\ start\ a\ session\ and\ print\ sesssion.\ You\ can\ also\ add\ your\ own\ game\!\r\n\r\n\ @author\ (Illia)\r\n\ @version\ (5/7/2026)\r\n
 comment1.params=args
 comment1.target=void\ main(java.lang.String[])
 comment1.text=\r\n\ Constructor\ for\ objects\ of\ class\ Main\r\n
