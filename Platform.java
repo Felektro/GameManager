@@ -1,6 +1,6 @@
 
 /**
- * Enumeration class D - an Enum that has several platform a game could be played on
+ * Enumeration class D - an Enum that has several platforms a game could be played on
  *
  * @author (Guy)
  * @version (5/7/2026)

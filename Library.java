@@ -103,7 +103,9 @@ public class Library
     }
     
     //option 4
-    
+    /**
+     * Returns a string of top rated games 
+     */
     public String topRatedGames(int count){
         if(count > games.size()){
             count = games.size();
@@ -127,7 +129,7 @@ public class Library
                 j++;
             }
             
-            result += games.get(maxInd).toString() + "\n";
+            result += copy.get(maxInd).toString() + "\n";
             copy.remove(maxInd);
         }
         
@@ -135,6 +137,9 @@ public class Library
     }
 
     //option 5
+    /**
+     * Returns the game you're looking for 
+     */
     public Game searchByName(String name){
         for(Game g : games){
             if(g.getName().toLowerCase().contains(name.toLowerCase())){
@@ -145,7 +150,9 @@ public class Library
     }
 
     //option 7
-
+    /**
+     * Starts a make believe game session that tracks your time "played"
+     */
     public void startGameSession(Game game){
         System.out.println("Starting " + game.getName() + "...");
         if(game instanceof SinglePlayer){
@@ -179,7 +186,10 @@ public class Library
         game.playtime += playtime;
         lastGame = game;
     }
-
+    
+    /**
+     * Add a game to the library
+     */
     public void addGame(Game game)
     {
         game.setID(nextID++);
