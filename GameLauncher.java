@@ -20,7 +20,7 @@ public class GameLauncher
     }
     
     /**
-     * 
+     * Start a make believe of time played
      */
     public void startGameTime(Game game)
     {
@@ -28,6 +28,9 @@ public class GameLauncher
         this.startTime = System.currentTimeMillis();
     }
     
+    /**
+     * ends the timer
+     */
     public void endGameTime()
     {
         this.endTime = System.currentTimeMillis();

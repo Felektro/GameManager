@@ -196,11 +196,17 @@ public class Library
         games.add(game);
     }
     
+    /**
+     * remove game from library
+     */
     public void removeGame(Game game)
     {
         games.remove(game);
     }
     
+    /**
+     * Prints all games in the library
+     */
     public void printAllGames()
     {
         for(Game g: games){
