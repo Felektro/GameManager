@@ -1,6 +1,6 @@
 #BlueJ class context
 comment0.target=MultiPlayer
-comment0.text=\r\n\ Multiplayer\ games\ you\ can\ add\r\n\r\n\ @author\ (Guy)\r\n\ @version\ (5/7/2026)\r\n
+comment0.text=\r\n\ Multiplayer\ games\ you\ can\ add\r\n\r\n\ @author\ (Guy\ and\ Illia)\r\n\ @version\ (5/7/2026)\r\n
 comment1.params=gameName\ gameAgeRate\ rating\ gameID
 comment1.target=MultiPlayer(java.lang.String,\ char,\ float,\ int)
 comment2.params=

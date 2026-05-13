@@ -10,7 +10,7 @@ import java.util.Scanner;
  */
 public class Main
 {
-    // instance variables - replace the example below with your own
+    
     /**
      * Constructor for objects of class Main
      */

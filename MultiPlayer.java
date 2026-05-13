@@ -2,7 +2,7 @@
 /**
  * Multiplayer games you can add
  *
- * @author (Guy)
+ * @author (Guy and Illia)
  * @version (5/7/2026)
  */
 public class MultiPlayer extends Game
