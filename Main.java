@@ -103,8 +103,16 @@ public class Main
                     System.out.println("What do you rate it? (0-10)");
                     try{
                          opt = Float.parseFloat(sc.nextLine());
+                         
+                         if(opt > 10 || opt < 0){
+                             throw new ArithmeticException ();
+                         }
+                    }catch(ArithmeticException e){
+                        System.out.println("The rating needs to be bigger than 0 and smaller than 10");
+                        break;
                     }catch (Exception e){
                         System.out.println("Not an option");
+                        break;
                     }
                     if(foundGame != null){
                         foundGame.setRating(opt);
@@ -140,8 +148,22 @@ public class Main
                     char ageRate = sc.nextLine().charAt(0);
                     
                     System.out.println("Whats your rating of the game? (0-10)");
-                    float rating = Float.parseFloat(sc.nextLine());
+                    float rating = 0;
 
+                    try{
+                         rating = Float.parseFloat(sc.nextLine());
+                         
+                         if(rating > 10 || rating < 0){
+                             throw new ArithmeticException ();
+                         }
+                    }catch(ArithmeticException e){
+                        System.out.println("The rating needs to be bigger than 0 and smaller than 10");
+                        break;
+                    }catch (Exception e){
+                        System.out.println("Not an option");
+                        break;
+                    }
+                    
                     Game newGame = new Game(name, ageRate, rating, 0);
 
                     lib.addGame(newGame);

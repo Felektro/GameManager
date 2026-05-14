@@ -15,7 +15,7 @@ public class Library
     
     double startPlaytime = 0.0;
 
-    int nextID = 8;
+    int nextID = 10;
     
     Game lastGame = null;
 
@@ -23,24 +23,53 @@ public class Library
     {
         games = new ArrayList<>();
         
-        addGame(new Game("test_game1", 'E', 5.5f, 1));
-        addGame(new Game("test_game2", 'T', 5.6f, 2));
-        addGame(new Game("test_game3", 'A', 5.7f, 3));
-        addGame(new Game("test_game2", 'T', 5.8f, 4));
-        addGame(new Game("test_game3", 'A', 5.9f, 5));
-        addGame(new SinglePlayer("test_SinglePlayer", 'A', 5.9f, 6));
-        addGame(new MultiPlayer("test_MultiPlayer", 'A', 5.9f, 7));
-        ((MultiPlayer) games.get(games.size() - 1)).setMaxPlayers(4);
+        Game game1 = new Game("Elden Ring", 'M', 9.7f, 1);
+        game1.addGameTag(GameTag.ADVENTURE);
+        game1.addPlatform(Platform.PC);
+        addGame(game1);
         
-        for(int i = 0; i < 3; i++){
-            games.get(i).addPlatform(Platform.PC);
-            games.get(i).addPlatform(Platform.XBOX);
-            games.get(i).addPlatform(Platform.MOBILE);
-            
-            games.get(i).addGameTag(GameTag.INDIE);
-            games.get(i).addGameTag(GameTag.AAA);
-            games.get(i).addGameTag(GameTag.TWOD);
-        }
+        Game game2 = new Game("Hades", 'T', 9.1f, 2);
+        game2.addGameTag(GameTag.INDIE);
+        game2.addPlatform(Platform.SWITCH);
+        addGame(game2);
+        
+        Game game3 = new Game("Civilization VI", 'E', 8.8f, 3);
+        game3.addGameTag(GameTag.STRATEGY);
+        game3.addPlatform(Platform.PS4);
+        addGame(game3);
+
+        SinglePlayer sp1 = new SinglePlayer("The Witcher 3", 'M', 9.8f, 4);
+        sp1.addGameTag(GameTag.AAA);
+        sp1.addPlatform(Platform.PC);
+        addGame(sp1);
+        
+        SinglePlayer sp2 = new SinglePlayer("Celeste", 'E', 9.0f, 5);
+        sp2.addGameTag(GameTag.INDIE);
+        sp2.addPlatform(Platform.SWITCH);
+        addGame(sp2);
+        
+        SinglePlayer sp3 = new SinglePlayer("God of War", 'M', 9.6f, 6);
+        sp3.addGameTag(GameTag.ADVENTURE);
+        sp3.addPlatform(Platform.PS4);
+        addGame(sp3);
+        
+        MultiPlayer mp1 = new MultiPlayer("Fortnite", 'T', 8.5f, 7);
+        mp1.addGameTag(GameTag.F2P);
+        mp1.addPlatform(Platform.PC);
+        mp1.setMaxPlayers(100);
+        addGame(mp1);
+        
+        MultiPlayer mp2 = new MultiPlayer("Minecraft", 'E', 9.5f, 8);
+        mp2.addGameTag(GameTag.TWOD);
+        mp2.addPlatform(Platform.MOBILE);
+        mp2.setMaxPlayers(8);
+        addGame(mp2);
+        
+        MultiPlayer mp3 = new MultiPlayer("Call of Duty", 'M', 8.9f, 9);
+        mp3.addGameTag(GameTag.AAA);
+        mp3.addPlatform(Platform.XBOX);
+        mp3.setMaxPlayers(16);
+        addGame(mp3);
     }
     
     //option 1
